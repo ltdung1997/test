@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog mProgressDialog;
     public static final int PROGRESS_BAR_TYPE = 0;
-
+    public static final String APK_URL = "https://github.com/ltdung1997/test/blob/master/app/release/update.apk";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        new DownloadFileFromURL().execute(APK_URL);
     }
 
     @Override
